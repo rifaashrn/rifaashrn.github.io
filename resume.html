@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rifa Sherin — Resume / Curriculum Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --text-dark: #0f172a;
+      --text-muted: #334155;
+      --border-color: #cbd5e1;
+      --bg-page: #f1f5f9;
+      --bg-paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-dark);
+      line-height: 1.5;
+      padding: 24px 16px;
+    }
+
+    .action-bar {
+      max-width: 850px;
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-back {
+      background: #ffffff;
+      color: var(--text-dark);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-back:hover {
+      background: #e2e8f0;
+    }
+
+    .btn-print {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-print:hover {
+      background: #1d4ed8;
+    }
+
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--bg-paper);
+      padding: 44px 48px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+    }
+
+    /* Header */
+    .resume-header {
+      border-bottom: 2px solid var(--text-dark);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    .candidate-name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .candidate-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 4px;
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .contact-info a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .badge-noc {
+      background: #fef3c7;
+      color: #92400e;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.82rem;
+      border: 1px solid #fde68a;
+    }
+
+    /* Sections */
+    .resume-section {
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dark);
+      border-bottom: 1px solid #94a3b8;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+
+    .summary-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Skills Table */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .skills-table td {
+      padding: 5px 0;
+      vertical-align: top;
+    }
+
+    .skills-label {
+      width: 180px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .skills-desc {
+      color: var(--text-muted);
+    }
+
+    /* Experience & Project Items */
+    .job-item, .project-item {
+      margin-bottom: 16px;
+    }
+
+    .job-item:last-child, .project-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header, .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .job-role {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .job-company {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .job-date {
+      font-size: 0.85rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .job-bullets {
+      list-style-type: square;
+      padding-left: 20px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .job-bullets li {
+      margin-bottom: 4px;
+    }
+
+    /* Education & Languages */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-degree {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .edu-school {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .languages-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      .resume-container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+
+      @page {
+        margin: 1.5cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar -->
+  <div class="action-bar">
+    <a href="index.html" class="btn btn-back">← Back to Portfolio</a>
+    <button onclick="window.print()" class="btn btn-print">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <!-- Resume Container -->
+  <div class="resume-container">
+    
+    <!-- Header -->
+    <header class="resume-header">
+      <h1 class="candidate-name">Rifa Sherin</h1>
+      <div class="candidate-title">RPA Developer (UiPath) | Intelligent Automation Engineer | AI Workflow Automation</div>
+      
+      <div class="contact-info">
+        <span>📍 Doha, Qatar (Open to Qatar, India & Remote)</span>
+        <span>📞 <a href="tel:+97470860489">+974 7086 0489</a></span>
+        <span>✉️ <a href="mailto:rifasherin958@gmail.com">rifasherin958@gmail.com</a></span>
+        <span class="badge-noc">Transferable Visa with NOC</span>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="resume-section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Recent Computer Science graduate with hands-on production experience in UiPath RPA and intelligent automation, gained during an internship at Power International Holding (Doha, Qatar). Delivered a production RPA system running unattended across 3 countries (Qatar, Saudi Arabia, UAE) with zero manual intervention, covering IBAN, SWIFT, and account number verification for Gulf-region banks. Passionate about automation that solves real data quality and compliance problems at scale.
+      </p>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="resume-section">
+      <h2 class="section-title">Technical Skills</h2>
+      <table class="skills-table">
+        <tr>
+          <td class="skills-label">RPA & Automation</td>
+          <td class="skills-desc">UiPath Studio, UiPath Orchestrator, Unattended Bots, ReFramework, Workflow Orchestration, n8n</td>
+        </tr>
+        <tr>
+          <td class="skills-label">AI & Data</td>
+          <td class="skills-desc">Python (ML pipelines, SMTP alerts, data processing), SQL, Data Validation & Cleansing, Excel Automation</td>
+        </tr>
+        <tr>
+          <td class="skills-label">Web & APIs</td>
+          <td class="skills-desc">REST APIs, Node.js, React.js, JavaScript, MySQL, PostgreSQL, MongoDB</td>
+        </tr>
+        <tr>
+          <td class="skills-label">Cloud & DevOps</td>
+          <td class="skills-desc">Oracle Cloud (OCI), AWS, Docker, Git, CI/CD basics</td>
+        </tr>
+        <tr>
+          <td class="skills-label">Domain Knowledge</td>
+          <td class="skills-desc">Banking data governance, IBAN/SWIFT/BBAN standards, Gulf-region bank validation (QA, KSA, UAE)</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="resume-section">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-role">Intelligent Automation Developer (Intern)</span> · 
+            <span class="job-company">Power International Holding • Doha, Qatar</span>
+          </div>
+          <span class="job-date">Jan 2026 – Apr 2026</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Built and deployed a multi-country Bank Validation System (Qatar, Saudi Arabia, UAE) using UiPath Studio and Orchestrator, processing banking records with zero manual intervention.</li>
+          <li>Designed a two-phase IBAN validation engine (structural checks against Gulf-region standards, then live cross-referencing via browser automation) plus SWIFT/account verification with six-condition status classification.</li>
+          <li>Configured unattended bot deployment via Orchestrator (Machine Key setup, trigger scheduling, remote monitoring) and delivered automated exception reports for finance and compliance teams — replacing a fully manual review process.</li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-role">Full Stack Developer (Intern)</span> · 
+            <span class="job-company">Thaniya Technologies • Mangalore, India</span>
+          </div>
+          <span class="job-date">Feb 2025 – May 2025</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Built dynamic web applications using React.js and Node.js, integrating REST APIs for real-time data exchange between frontend and MySQL backend.</li>
+          <li>Optimised database query performance and data handling pipelines for improved response times.</li>
+          <li>Collaborated in Agile sprints using Git/GitHub, contributing to code reviews and feature delivery within fortnightly release cycles.</li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-role">Cybersecurity Intern</span> · 
+            <span class="job-company">DLithe • Bangalore, India</span>
+          </div>
+          <span class="job-date">Oct 2023 – Nov 2023</span>
+        </div>
+        <ul class="job-bullets">
+          <li>Conducted vulnerability assessments and penetration testing including SQL injection analysis; documented findings and recommended hardening measures.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Key Projects -->
+    <section class="resume-section">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-item">
+        <div class="project-header">
+          <div>
+            <strong>Bank Validation System</strong> — UiPath RPA | Power International Holding, Qatar
+          </div>
+        </div>
+        <ul class="job-bullets">
+          <li>Multi-country automation validating IBAN, SWIFT codes, and account numbers for Gulf-region banks across Qatar, Saudi Arabia, and UAE using UiPath Studio and Orchestrator. (Enterprise Production).</li>
+          <li>Delivered automated Excel reporting with status classification and corrective action guidance for compliance teams.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <div>
+            <strong>AI-Powered Bid Automation Pipeline</strong> — n8n + Python
+          </div>
+        </div>
+        <ul class="job-bullets">
+          <li>Built a 13-node n8n workflow integrating Python scripts and an LLM API to detect hiring posts, generate tailored bid responses, and deduplicate leads via SQLite.</li>
+          <li>Automated post detection and AI response drafting, reducing manual research time by over 80%.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <div>
+            <strong>Fraud Detection System</strong> — Machine Learning
+          </div>
+        </div>
+        <ul class="job-bullets">
+          <li>Built a credit card fraud detection model analysing historical transaction data; integrated an SMTP alert system for real-time fraud notifications.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="resume-section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-row">
+        <div>
+          <span class="edu-degree">B.Tech in Computer Science Engineering</span> · 
+          <span class="edu-school">Shree Devi Institute of Technology (VTU) • Karnataka, India</span>
+        </div>
+        <span class="job-date">2021 – 2025</span>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="resume-section">
+      <h2 class="section-title">Languages</h2>
+      <p class="languages-text">
+        English (Fluent) • Malayalam (Native) • Hindi (Conversational) • Arabic (Basic)
+      </p>
+    </section>
+
+  </div>
+
+</body>
+</html>

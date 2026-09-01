@@ -320,11 +320,11 @@ widgetRoot.innerHTML += `
       <button class="ct-close" id="ct-close-btn">&times;</button>
     </div>
 
-    <!-- One-Click Resume & LinkedIn Bar -->
+    <!-- One-Click Resume & GitHub Bar -->
     <div class="ct-action-bar">
-      <a href="#" onclick="alert('Resume PDF placeholder link')" class="ct-action-btn">📄 Resume PDF</a>
-      <a href="https://linkedin.com" target="_blank" class="ct-action-btn">💼 LinkedIn Profile</a>
-      <button onclick="sendQuickQuestion('What is Rifa\'s email & contact info?')" class="ct-action-btn">✉️ Contact Info</button>
+      <a href="resume.html" target="_blank" class="ct-action-btn">📄 View / Print CV</a>
+      <a href="https://github.com/rifaashrn" target="_blank" class="ct-action-btn">💻 GitHub</a>
+      <button onclick="sendQuickQuestion('What locations is Rifa open to and what is her visa status?')" class="ct-action-btn">📍 Locations & Visa</button>
     </div>
 
     <div id="ct-log">
