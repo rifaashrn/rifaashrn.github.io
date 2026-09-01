@@ -370,13 +370,15 @@ const win = document.getElementById("ct-window");
 const closeBtn = document.getElementById("ct-close-btn");
 const teaser = document.getElementById("ct-teaser");
 
-function toggleChat() {
+window.toggleChat = function() {
   win.classList.toggle("ct-hidden");
   if (!win.classList.contains("ct-hidden")) {
     teaser.style.display = "none";
     document.getElementById("ct-input").focus();
   }
-}
+};
+
+const toggleChat = window.toggleChat;
 
 fab.addEventListener("click", toggleChat);
 teaser.addEventListener("click", toggleChat);
@@ -387,7 +389,7 @@ window.forwardToHiringManager = function() {
   const log = document.getElementById("ct-log");
   log.innerHTML += `<div class="ct-msg user">📨 Generate email snippet for my Hiring Manager</div>`;
   
-  const snippetText = `Hi Team,\n\nI reviewed Rifa Sherin's profile — an Intelligent Automation Developer with hands-on experience in UiPath, n8n, Python, and RAG/AI applications.\n\nCheck out her live portfolio & AI Twin: https://career-twin-backend-zocy.onrender.com`;
+  const snippetText = `Hi Team,\n\nI reviewed Rifa Sherin's profile — an Intelligent Automation Developer (UiPath, Python, n8n, RAG/AI) based in Doha, Qatar with a Transferable Visa (NOC).\n\nCheck out her live portfolio & AI Twin: https://rifaashrn.github.io`;
   
   log.innerHTML += `
     <div class="ct-msg bot">
