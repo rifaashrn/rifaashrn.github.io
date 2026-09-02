@@ -1,23 +1,25 @@
 /* ==========================================================================
-   RIFA SHERIN — CLEAN & MINIMAL DARK PORTFOLIO
-   Focused on Authenticity, Readability, and Flash Cards
+   RIFA SHERIN — MINIMAL MONOCHROME GREY & BLACK PORTFOLIO
+   Design: Ultra-clean, Minimalist Charcoal, Graphite & Platinum Silver
    ========================================================================== */
 
 :root {
-  --bg-body: #0d0f14;
-  --bg-surface: #141820;
-  --bg-card: #1a1f2c;
-  --bg-card-hover: #22293a;
+  --bg-body: #09090b;       /* Deep obsidian black */
+  --bg-surface: #121215;    /* Subtle dark charcoal surface */
+  --bg-card: #18181b;       /* Elevated dark card */
+  --bg-card-hover: #222226;
   --border-card: rgba(255, 255, 255, 0.09);
-  --border-card-hover: rgba(255, 255, 255, 0.2);
+  --border-card-hover: rgba(255, 255, 255, 0.22);
 
-  --accent-blue: #60a5fa;
-  --accent-blue-soft: #bfdbfe;
+  /* Grey & Silver Accents */
+  --accent-grey: #e4e4e7;       /* Bright platinum silver */
+  --accent-grey-soft: #a1a1aa;  /* Cool silver-grey */
+  --accent-pill-bg: rgba(255, 255, 255, 0.08);
   
   --text-white: #ffffff;
-  --text-main: #e2e8f0;
-  --text-muted: #94a3b8;
-  --text-dim: #64748b;
+  --text-main: #e4e4e7;
+  --text-muted: #a1a1aa;
+  --text-dim: #71717a;
 
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -49,8 +51,8 @@ body {
 }
 
 ::selection {
-  background: var(--accent-blue);
-  color: #000000;
+  background: #ffffff;
+  color: #09090b;
 }
 
 .container {
@@ -69,7 +71,7 @@ body {
   right: 0;
   z-index: 1000;
   padding: 18px 0;
-  background: rgba(13, 15, 20, 0.85);
+  background: rgba(9, 9, 11, 0.85);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-card);
@@ -78,7 +80,7 @@ body {
 
 .navbar.scrolled {
   padding: 12px 0;
-  background: rgba(13, 15, 20, 0.98);
+  background: rgba(9, 9, 11, 0.98);
 }
 
 .nav-container {
@@ -94,7 +96,7 @@ body {
   font-size: 1.15rem;
   font-weight: 800;
   color: var(--text-white);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -121,6 +123,12 @@ body {
   border-radius: 6px;
   font-size: 0.82rem;
   border: 1px solid var(--border-card);
+  color: var(--accent-grey);
+}
+
+.nav-link.resume-badge:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .nav-right {
@@ -130,9 +138,9 @@ body {
 }
 
 .btn-ai-header {
-  background: rgba(96, 165, 250, 0.12);
-  color: var(--accent-blue);
-  border: 1px solid rgba(96, 165, 250, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-white);
+  border: 1px solid var(--border-card);
   padding: 6px 14px;
   border-radius: 18px;
   font-family: var(--font-main);
@@ -146,8 +154,8 @@ body {
 }
 
 .btn-ai-header:hover {
-  background: rgba(96, 165, 250, 0.2);
-  border-color: var(--accent-blue);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .hamburger {
@@ -197,9 +205,9 @@ body {
 .pulse-beacon {
   width: 7px;
   height: 7px;
-  background: #22c55e;
+  background: #a1a1aa;
   border-radius: 50%;
-  box-shadow: 0 0 8px #22c55e;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
 .hero-title {
@@ -214,7 +222,7 @@ body {
 .hero-role-subtitle {
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--accent-blue);
+  color: var(--accent-grey);
   margin-bottom: 24px;
 }
 
@@ -259,12 +267,12 @@ body {
 }
 
 .btn-primary {
-  background: var(--text-white);
-  color: #0b0d11;
+  background: #ffffff;
+  color: #09090b;
 }
 
 .btn-primary:hover {
-  background: #e2e8f0;
+  background: #e4e4e7;
   transform: translateY(-1px);
 }
 
@@ -334,7 +342,7 @@ body {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--accent-blue);
+  color: var(--text-muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 6px;
@@ -372,7 +380,7 @@ body {
 
 .skill-icon {
   font-size: 1.5rem;
-  color: var(--accent-blue);
+  color: var(--accent-grey);
   margin-bottom: 12px;
 }
 
@@ -423,8 +431,8 @@ body {
 }
 
 .flash-card.featured-flash {
-  border-color: rgba(96, 165, 250, 0.35);
-  background: linear-gradient(180deg, #1a2233 0%, var(--bg-card) 100%);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: linear-gradient(180deg, #202024 0%, var(--bg-card) 100%);
 }
 
 .card-top-tag {
@@ -445,8 +453,9 @@ body {
 }
 
 .tag-label.blue {
-  background: rgba(96, 165, 250, 0.15);
-  color: var(--accent-blue);
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--text-white);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .tag-time {
@@ -502,7 +511,7 @@ body {
   gap: 5px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--accent-blue);
+  color: var(--accent-grey);
 }
 
 .card-link:hover {
@@ -511,7 +520,11 @@ body {
 
 .note-confidential {
   font-size: 0.78rem;
-  color: #fbbf24;
+  color: #d4d4d8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-card);
 }
 
 /* ==========================================================================
@@ -547,7 +560,7 @@ body {
 
 .exp-org {
   font-size: 0.9rem;
-  color: var(--accent-blue);
+  color: var(--accent-grey);
   font-weight: 500;
   margin-top: 2px;
 }
@@ -579,7 +592,7 @@ body {
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--accent-blue);
+  color: var(--accent-grey-soft);
   font-weight: bold;
 }
 
@@ -601,7 +614,7 @@ body {
 
 .box-icon {
   font-size: 1.6rem;
-  color: var(--accent-blue);
+  color: var(--accent-grey);
   margin-bottom: 12px;
 }
 
@@ -642,7 +655,7 @@ body {
 }
 
 .l-pill strong { color: var(--text-white); }
-.l-pill span { color: var(--accent-blue); }
+.l-pill span { color: var(--accent-grey-soft); }
 
 /* ==========================================================================
    Contact Section
@@ -685,8 +698,9 @@ body {
 }
 
 .c-link-item:hover {
-  border-color: var(--accent-blue);
-  color: var(--accent-blue);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  background: #202024;
   transform: translateY(-1px);
 }
 
@@ -701,7 +715,7 @@ body {
 .footer {
   border-top: 1px solid var(--border-card);
   padding: 30px 0;
-  background: #090a0e;
+  background: #060608;
 }
 
 .footer-row {
@@ -748,7 +762,7 @@ body {
     right: -100%;
     width: 240px;
     height: 100vh;
-    background: #11141c;
+    background: #111114;
     border-left: 1px solid var(--border-card);
     flex-direction: column;
     align-items: flex-start;
