@@ -322,7 +322,7 @@ widgetRoot.innerHTML += `
 
     <!-- One-Click Resume & GitHub Bar -->
     <div class="ct-action-bar">
-      <a href="resume.html" target="_blank" class="ct-action-btn">📄 View / Print CV</a>
+      <a href="Rifa_Sherin_Resume.pdf" target="_blank" class="ct-action-btn">📄 Resume (PDF)</a>
       <a href="https://github.com/rifaashrn" target="_blank" class="ct-action-btn">💻 GitHub</a>
       <button onclick="sendQuickQuestion('What locations is Rifa open to and what is her visa status?')" class="ct-action-btn">📍 Locations & Visa</button>
     </div>
