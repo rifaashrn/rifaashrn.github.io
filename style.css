@@ -1,6 +1,6 @@
 /* ==========================================================================
    RIFA SHERIN — PREMIUM MINIMAL DARK PORTFOLIO
-   Design Theme: Modern Dark SaaS / Agency Aesthetic (Framer / Dribbble Style)
+   Design Theme: Modern Dark SaaS / Framer Aesthetic
    ========================================================================== */
 
 :root {
@@ -46,8 +46,8 @@ html {
 }
 
 body {
-  background-color: var(--bg-body);
-  color: var(--text-main);
+  background-color: var(--bg-body) !important;
+  color: var(--text-main) !important;
   font-family: var(--font-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -81,14 +81,16 @@ body {
   z-index: 1000;
   padding: 20px 0;
   transition: all 0.3s ease;
-}
-
-.navbar.scrolled {
-  background: rgba(11, 13, 17, 0.85);
+  background: rgba(11, 13, 17, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-card);
+}
+
+.navbar.scrolled {
+  background: rgba(11, 13, 17, 0.95);
   padding: 14px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .nav-container {
@@ -622,10 +624,10 @@ body {
   transform: translateY(-4px);
 }
 
-/* Featured Soft Blue Card (Directly matching user screenshot) */
+/* Featured Soft Blue Card */
 .service-card.featured-blue {
-  background: var(--card-blue-bg);
-  color: var(--card-blue-text);
+  background: var(--card-blue-bg) !important;
+  color: var(--card-blue-text) !important;
   box-shadow: 0 16px 40px rgba(59, 130, 246, 0.2);
 }
 
@@ -635,15 +637,15 @@ body {
 }
 
 .service-card.featured-blue .card-title {
-  color: var(--card-blue-text);
+  color: var(--card-blue-text) !important;
 }
 
 .service-card.featured-blue .card-desc {
-  color: #334155;
+  color: #334155 !important;
 }
 
 .service-card.featured-blue .card-link {
-  color: var(--card-blue-text);
+  color: var(--card-blue-text) !important;
   font-weight: 700;
 }
 
