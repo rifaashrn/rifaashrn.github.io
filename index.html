@@ -3,465 +3,597 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rifa Sherin — RPA Developer & Intelligent Automation Engineer</title>
+  <title>Rifa Sherin — Intelligent Automation & RPA Engineer</title>
   <meta name="description" content="Portfolio of Rifa Sherin - RPA Developer (UiPath), Intelligent Automation Engineer, and AI Workflow Specialist based in Doha, Qatar. Transferable Visa with NOC.">
+  
+  <!-- Premium Modern Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <span class="logo-symbol">&lt;/&gt;</span> Rifa Sherin
+      <a href="#home" class="nav-logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">Rifa<span class="accent-text">.dev</span></span>
       </a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="Rifa_Sherin_Resume.pdf" target="_blank">Resume (PDF)</a>
-        <a href="#contact" class="nav-btn-contact">Contact</a>
-        <button onclick="toggleChat()" class="nav-btn-ai">🤖 Ask AI Twin</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Case Studies</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="Rifa_Sherin_Resume.pdf" target="_blank" class="nav-link resume-badge">Resume PDF</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-right">
+        <button onclick="toggleChat()" class="btn-ai-header">
+          <i class="ri-robot-2-line"></i>
+          <span>Ask AI Twin</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container hero-content">
-      <div class="status-badge">
-        <span class="pulse-dot"></span> Open to Roles in Qatar · India · Global Remote
-      </div>
-      <h1 class="hero-title">
-        Hi, I'm <span class="gradient-text">Rifa Sherin</span>
-      </h1>
-      <p class="hero-subtitle">
-        RPA Developer (UiPath) · Intelligent Automation Engineer · AI Workflow Architect
-      </p>
-      <p class="hero-description">
-        Recent Computer Science graduate with hands-on production experience architecting unattended <strong>UiPath RPA bots</strong> and <strong>AI automation pipelines</strong>. Deployed multi-country banking validation systems across Qatar, Saudi Arabia, and the UAE with zero manual intervention.
-      </p>
-
-      <!-- Quick Metadata Info Badges -->
-      <div class="meta-badges">
-        <div class="meta-badge">
-          <span class="badge-icon">📍</span>
-          <span>Doha, Qatar (Open to QA, IN & Remote)</span>
-        </div>
-        <div class="meta-badge highlight">
-          <span class="badge-icon">🛂</span>
-          <span><strong>Transferable Visa with NOC (Qatar)</strong></span>
-        </div>
-        <div class="meta-badge">
-          <span class="badge-icon">📞</span>
-          <a href="tel:+97470860489">+974 7086 0489</a>
-        </div>
-        <div class="meta-badge">
-          <span class="badge-icon">✉️</span>
-          <a href="mailto:rifasherin958@gmail.com">rifasherin958@gmail.com</a>
-        </div>
-      </div>
-
-      <div class="hero-actions">
-        <button onclick="toggleChat()" class="btn btn-primary">
-          <span>🤖 Chat with My AI Twin</span>
-        </button>
-        <a href="Rifa_Sherin_Resume.pdf" target="_blank" class="btn btn-secondary">
-          <span>📄 View / Download Resume (PDF)</span>
-        </a>
-        <a href="https://github.com/rifaashrn" target="_blank" rel="noopener" class="btn btn-outline">
-          <span>💻 GitHub Profile</span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Key Metrics Strip -->
-  <section class="metrics-strip">
-    <div class="container metrics-grid">
-      <div class="metric-card">
-        <div class="metric-number">3 Countries</div>
-        <div class="metric-label">Unattended UiPath RPA in Qatar, KSA & UAE</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-number">0%</div>
-        <div class="metric-label">Manual Intervention in Banking Validation</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-number">80%+</div>
-        <div class="metric-label">Time Saved with 13-Node AI Pipelines</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-number">Immediate</div>
-        <div class="metric-label">Transferable NOC Status in Qatar</div>
-      </div>
-    </div>
-  </section>
-
-  <main class="container">
+  <main>
     
-    <!-- About Section -->
-    <section id="about" class="content-section">
-      <div class="section-header">
-        <span class="section-tag">BACKGROUND</span>
-        <h2>Professional Summary</h2>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="pulse-beacon"></span>
+            <span>Available for hire in Qatar (NOC) & Remote</span>
+          </div>
+
+          <h1 class="hero-title">
+            Intelligent <span class="highlight-blue">automation</span> for your enterprise & workflows.
+          </h1>
+
+          <p class="hero-bio">
+            Hey there! I'm <strong>Rifa Sherin</strong>, an Intelligent Automation & UiPath RPA Developer. I architect unattended bots, autonomous AI pipelines, and end-to-end integration solutions.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-btns">
+            <button onclick="toggleChat()" class="btn btn-primary">
+              <span>Let's talk to AI Twin</span>
+              <i class="ri-arrow-right-up-line"></i>
+            </button>
+            <a href="#projects" class="btn btn-secondary">
+              <span>See case studies</span>
+            </a>
+            <a href="Rifa_Sherin_Resume.pdf" target="_blank" class="btn btn-outline">
+              <i class="ri-file-download-line"></i>
+              <span>Download CV</span>
+            </a>
+          </div>
+
+          <!-- Quick Telemetry Specs -->
+          <div class="hero-specs">
+            <div class="spec-node">
+              <i class="ri-map-pin-line"></i>
+              <span>Doha, Qatar (QA · IN · Remote)</span>
+            </div>
+            <div class="spec-node highlight">
+              <i class="ri-shield-check-line"></i>
+              <span>Transferable Visa with NOC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card -->
+        <div class="hero-visual-card">
+          <div class="visual-card-inner">
+            <div class="visual-glow-bg"></div>
+            
+            <div class="card-chip-top">
+              <span class="chip-dot"></span>
+              <span>PRODUCTION BOT ONLINE</span>
+            </div>
+
+            <div class="visual-center-content">
+              <div class="avatar-ring">
+                <i class="ri-cpu-line"></i>
+              </div>
+              <h3 class="visual-name">Rifa Sherin</h3>
+              <p class="visual-sub">RPA & Intelligent Automation Engineer</p>
+
+              <div class="visual-badges">
+                <span class="v-badge">UiPath Studio</span>
+                <span class="v-badge">Orchestrator</span>
+                <span class="v-badge">Python</span>
+                <span class="v-badge">n8n AI</span>
+              </div>
+            </div>
+
+            <!-- Floating Metric Pills -->
+            <div class="floating-pill pill-top">
+              <i class="ri-global-line"></i>
+              <div>
+                <strong>3 Countries</strong>
+                <span>Unattended RPA</span>
+              </div>
+            </div>
+
+            <div class="floating-pill pill-bottom">
+              <i class="ri-flashlight-line"></i>
+              <div>
+                <strong>80%+ Faster</strong>
+                <span>AI Pipelines</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="about-card">
-        <p>
-          I am a passionate <strong>Intelligent Automation Engineer & RPA Developer</strong> specializing in building robust, error-free robotic pipelines and integrating modern LLMs into business processes. 
-        </p>
-        <p>
-          During my time at <strong>Power International Holding (Doha, Qatar)</strong>, I designed and deployed an enterprise-grade <strong>Bank Validation System</strong> operating across three Gulf countries (Qatar, Saudi Arabia, and UAE). My work focused on multi-phase IBAN, SWIFT, and BBAN governance, eliminating human review and ensuring 24/7 reliability through UiPath Orchestrator.
-        </p>
-        <p>
-          Combining my <strong>Computer Science Engineering degree</strong> with practical experience in <strong>Python, React, Node.js, SQL, and n8n</strong>, I bridge the gap between traditional enterprise RPA and next-generation Agentic AI automation.
-        </p>
+
+      <!-- Tech Stack Logos Ribbon -->
+      <div class="tech-ribbon-wrapper">
+        <div class="container">
+          <p class="ribbon-label">STACK & PLATFORMS I DEPLOY WITH</p>
+          <div class="tech-ribbon">
+            <div class="logo-item"><i class="ri-robot-2-line"></i> <span>UIPATH ORCHESTRATOR</span></div>
+            <div class="logo-item"><i class="ri-code-s-slash-line"></i> <span>PYTHON DATA ENGINES</span></div>
+            <div class="logo-item"><i class="ri-mind-map"></i> <span>N8N WORKFLOWS</span></div>
+            <div class="logo-item"><i class="ri-brain-line"></i> <span>GEMINI & LLM APIS</span></div>
+            <div class="logo-item"><i class="ri-database-2-line"></i> <span>SQL & CHROMADB</span></div>
+            <div class="logo-item"><i class="ri-reactjs-line"></i> <span>REACT.JS & NODE</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Technical Skills Matrix -->
-    <section id="skills" class="content-section">
-      <div class="section-header">
-        <span class="section-tag">CAPABILITIES</span>
-        <h2>Technical Skills Matrix</h2>
-      </div>
-      <div class="skills-grid">
+    <!-- Services / What I Do Section (Matching the 2x2 Grid from reference) -->
+    <section id="services" class="section services-section">
+      <div class="container">
         
-        <div class="skill-category">
-          <div class="skill-icon">🤖</div>
-          <h3>RPA & Automation</h3>
-          <div class="skill-tags">
-            <span class="tag tag-primary">UiPath Studio</span>
-            <span class="tag tag-primary">UiPath Orchestrator</span>
-            <span class="tag tag-primary">Unattended Bots</span>
-            <span class="tag">ReFramework</span>
-            <span class="tag">Workflow Orchestration</span>
-            <span class="tag">n8n Pipelines</span>
-            <span class="tag">Excel & Browser Automation</span>
+        <div class="services-layout">
+          
+          <!-- Left Column Intro -->
+          <div class="services-intro">
+            <h2 class="section-heading">
+              Things I do that simply make your workflows better.
+            </h2>
+            <p class="section-desc">
+              From enterprise unattended bots validating thousands of regional transactions to autonomous AI bid pipelines that eliminate hours of manual grunt work.
+            </p>
+            <div class="services-intro-actions">
+              <a href="#projects" class="btn btn-secondary">See all case studies</a>
+              <button onclick="toggleChat()" class="btn btn-outline">
+                <i class="ri-chat-3-line"></i> Ask AI about stack
+              </button>
+            </div>
           </div>
+
+          <!-- Right 2x2 Grid of Cards -->
+          <div class="services-grid">
+            
+            <!-- Card 1: Featured Soft Blue Accent Card -->
+            <div class="service-card featured-blue">
+              <div class="card-icon-box">
+                <i class="ri-terminal-window-line"></i>
+              </div>
+              <h3 class="card-title">UiPath Robotic Automation</h3>
+              <p class="card-desc">
+                Production-grade unattended bots, ReFramework architectures, Orchestrator machine key setup, and automated 24/7 exception handling.
+              </p>
+              <a href="#projects" class="card-link">View project <i class="ri-arrow-right-line"></i></a>
+            </div>
+
+            <!-- Card 2: Dark Elevated Card -->
+            <div class="service-card dark-card">
+              <div class="card-icon-box">
+                <i class="ri-flow-chart"></i>
+              </div>
+              <h3 class="card-title">AI & Autonomous Pipelines</h3>
+              <p class="card-desc">
+                13-node n8n pipelines, Python data processing scripts, LLM integrations, and SQLite lead deduplication systems.
+              </p>
+              <a href="#projects" class="card-link">View pipeline <i class="ri-arrow-right-line"></i></a>
+            </div>
+
+            <!-- Card 3: Dark Elevated Card -->
+            <div class="service-card dark-card">
+              <div class="card-icon-box">
+                <i class="ri-bank-card-line"></i>
+              </div>
+              <h3 class="card-title">Banking & Compliance Systems</h3>
+              <p class="card-desc">
+                Gulf-region banking validation rules (Qatar, Saudi Arabia, UAE), two-phase IBAN/SWIFT governance, and automated Excel audits.
+              </p>
+              <a href="#about" class="card-link">Read background <i class="ri-arrow-right-line"></i></a>
+            </div>
+
+            <!-- Card 4: Dark Elevated Card -->
+            <div class="service-card dark-card">
+              <div class="card-icon-box">
+                <i class="ri-code-box-line"></i>
+              </div>
+              <h3 class="card-title">Full-Stack & Cloud Integration</h3>
+              <p class="card-desc">
+                FastAPI, React.js, Node.js, MySQL, PostgreSQL, Oracle Cloud (OCI), Docker, and Git Agile release cycles.
+              </p>
+              <a href="#experience" class="card-link">Read experience <i class="ri-arrow-right-line"></i></a>
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="skill-category">
-          <div class="skill-icon">🧠</div>
-          <h3>AI, ML & Data Engineering</h3>
-          <div class="skill-tags">
-            <span class="tag tag-primary">Python (Data Pipelines)</span>
-            <span class="tag">LLM APIs & Prompting</span>
-            <span class="tag">RAG & ChromaDB</span>
-            <span class="tag">Data Validation & Cleansing</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">SMTP Alert Systems</span>
-            <span class="tag">SQL Data Modeling</span>
-          </div>
+      </div>
+    </section>
+
+    <!-- Proven Process for Success (Matching Step 01-04 from reference) -->
+    <section id="process" class="section process-section">
+      <div class="container">
+        
+        <div class="process-header">
+          <h2 class="section-heading text-center">Proven process for success</h2>
+          <p class="section-desc text-center">How I deliver reliable intelligent automations from initial analysis to 24/7 production</p>
         </div>
 
-        <div class="skill-category">
-          <div class="skill-icon">🌐</div>
-          <h3>Web & APIs</h3>
-          <div class="skill-tags">
-            <span class="tag">RESTful APIs</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">React.js</span>
-            <span class="tag">JavaScript (ES6+)</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">MongoDB</span>
+        <div class="process-steps">
+          
+          <div class="step-item">
+            <div class="step-number">01</div>
+            <div class="step-dot"></div>
+            <h4 class="step-title">Process Discovery</h4>
+            <p class="step-desc">
+              Mapping manual bottlenecks, identifying edge cases, structural validation rules, and compliance criteria.
+            </p>
           </div>
+
+          <div class="step-item">
+            <div class="step-number">02</div>
+            <div class="step-dot"></div>
+            <h4 class="step-title">Architecture Design</h4>
+            <p class="step-desc">
+              Designing robust bots with ReFramework, Python data cleaning scripts, and exception classification logic.
+            </p>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">03</div>
+            <div class="step-dot"></div>
+            <h4 class="step-title">Unattended Deployment</h4>
+            <p class="step-desc">
+              Configuring UiPath Orchestrator, Machine Keys, trigger schedules, and remote heartbeat monitoring.
+            </p>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">04</div>
+            <div class="step-dot"></div>
+            <h4 class="step-title">Auditing & Reports</h4>
+            <p class="step-desc">
+              Generating automated Excel exception reports, real-time alert triggers, and zero-downtime execution.
+            </p>
+          </div>
+
         </div>
 
-        <div class="skill-category">
-          <div class="skill-icon">☁️</div>
-          <h3>Cloud, DevOps & Governance</h3>
-          <div class="skill-tags">
-            <span class="tag">Oracle Cloud (OCI)</span>
-            <span class="tag">AWS Basics</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Git & GitHub</span>
-            <span class="tag">CI/CD Fundamentals</span>
-            <span class="tag tag-accent">Banking Data Governance</span>
-            <span class="tag tag-accent">Gulf Standards (QA, KSA, UAE)</span>
+      </div>
+    </section>
+
+    <!-- Case Studies / Featured Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        
+        <div class="section-header-row">
+          <div>
+            <span class="subhead-pill">PRODUCTION WORK</span>
+            <h2 class="section-heading">Featured Case Studies</h2>
           </div>
+          <a href="https://github.com/rifaashrn" target="_blank" class="btn btn-outline">
+            <i class="ri-github-fill"></i> View GitHub Profile
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="p-card-top">
+              <span class="p-tag blue-tag">ENTERPRISE RPA</span>
+              <span class="p-year">2026</span>
+            </div>
+            <h3 class="p-title">Bank Validation System (Qatar, KSA, UAE)</h3>
+            <p class="p-sub">Power International Holding · Doha, Qatar</p>
+            <p class="p-desc">
+              Production unattended automation verifying IBAN, SWIFT codes, and account numbers across Gulf-region banks with zero manual intervention. Includes structural validation and live browser cross-referencing.
+            </p>
+            <div class="p-tech-list">
+              <span>UiPath Studio</span>
+              <span>Orchestrator</span>
+              <span>Gulf Standards</span>
+              <span>Excel Reporting</span>
+            </div>
+            <div class="p-card-footer">
+              <span class="confidential-pill"><i class="ri-lock-2-line"></i> Enterprise Confidential (Banking Data)</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="p-card-top">
+              <span class="p-tag">AI AUTOMATION</span>
+              <span class="p-year">2025</span>
+            </div>
+            <h3 class="p-title">AI-Powered Bid Automation Pipeline</h3>
+            <p class="p-sub">n8n + Python + LLM API + SQLite</p>
+            <p class="p-desc">
+              13-node autonomous workflow detecting freelance/contract leads, drafting contextual proposal bids with LLMs, and deduplicating client leads via SQLite — saving 80%+ manual research time.
+            </p>
+            <div class="p-tech-list">
+              <span>n8n</span>
+              <span>Python</span>
+              <span>Gemini LLM</span>
+              <span>SQLite</span>
+            </div>
+            <div class="p-card-footer">
+              <a href="https://github.com/rifaashrn" target="_blank" class="btn-link">View repository <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="p-card-top">
+              <span class="p-tag">MACHINE LEARNING</span>
+              <span class="p-year">2024</span>
+            </div>
+            <h3 class="p-title">Credit Card Fraud Detection System</h3>
+            <p class="p-sub">Python · ML Pipeline · Real-Time Alerts</p>
+            <p class="p-desc">
+              Credit card fraud classification model analysing historical financial transaction data to detect anomalous behavior, integrated with automated SMTP alert notifications.
+            </p>
+            <div class="p-tech-list">
+              <span>Python</span>
+              <span>Scikit-Learn</span>
+              <span>SMTP Alerts</span>
+              <span>Data Cleansing</span>
+            </div>
+            <div class="p-card-footer">
+              <a href="https://github.com/rifaashrn" target="_blank" class="btn-link">View repository <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="p-card-top">
+              <span class="p-tag blue-tag">RAG ARCHITECTURE</span>
+              <span class="p-year">2026</span>
+            </div>
+            <h3 class="p-title">Interactive AI Career Twin</h3>
+            <p class="p-sub">FastAPI · ChromaDB · Gemini Flash Lite · Render</p>
+            <p class="p-desc">
+              Live AI agent trained on Rifa's exact experience, metrics, and codebase. Embeds directly into this portfolio to answer recruiter questions 24/7 with zero latency.
+            </p>
+            <div class="p-tech-list">
+              <span>FastAPI</span>
+              <span>ChromaDB</span>
+              <span>Gemini API</span>
+              <span>Render Cloud</span>
+            </div>
+            <div class="p-card-footer flex-footer">
+              <a href="https://github.com/rifaashrn/career-twin-backend" target="_blank" class="btn-link">Backend Repo <i class="ri-arrow-right-line"></i></a>
+              <a href="https://github.com/rifaashrn/rifaashrn.github.io" target="_blank" class="btn-link">Frontend Repo <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+
         </div>
 
       </div>
     </section>
 
     <!-- Professional Experience Timeline -->
-    <section id="experience" class="content-section">
-      <div class="section-header">
-        <span class="section-tag">CAREER HISTORY</span>
-        <h2>Work Experience</h2>
-      </div>
-
-      <div class="timeline">
+    <section id="experience" class="section experience-section">
+      <div class="container">
         
-        <!-- Experience 1 -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3 class="role-title">Intelligent Automation Developer (Intern)</h3>
-                <h4 class="company-name">Power International Holding · Doha, Qatar</h4>
-              </div>
-              <span class="timeline-date">Jan 2026 – Apr 2026</span>
-            </div>
-            <ul class="timeline-bullets">
-              <li>Built and deployed a production <strong>multi-country Bank Validation System</strong> across Qatar, Saudi Arabia, and the UAE using UiPath Studio and Orchestrator with <strong>zero manual intervention</strong>.</li>
-              <li>Engineered a two-phase IBAN validation engine: structural checks against Gulf-region standards followed by live browser automation cross-referencing and 6-condition status classification.</li>
-              <li>Configured unattended bots in <strong>UiPath Orchestrator</strong> (Machine Keys, cron scheduling, remote monitoring, and heartbeat diagnostics) with automated Excel exception reporting for finance and compliance teams.</li>
-            </ul>
-            <div class="item-tags">
-              <span class="tag-sm">UiPath Studio</span>
-              <span class="tag-sm">UiPath Orchestrator</span>
-              <span class="tag-sm">Unattended Bots</span>
-              <span class="tag-sm">Banking Compliance</span>
-              <span class="tag-sm">Excel Automation</span>
-            </div>
+        <div class="section-header-row">
+          <div>
+            <span class="subhead-pill">CAREER TRACK RECORD</span>
+            <h2 class="section-heading">Work Experience</h2>
           </div>
         </div>
 
-        <!-- Experience 2 -->
-        <div class="timeline-item">
-          <div class="timeline-header-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
+        <div class="exp-cards-list">
+          
+          <!-- Experience 1 -->
+          <div class="exp-card">
+            <div class="exp-card-header">
               <div>
-                <h3 class="role-title">Full Stack Developer (Intern)</h3>
-                <h4 class="company-name">Thaniya Technologies · Mangalore, India</h4>
+                <h3 class="exp-role">Intelligent Automation Developer (Intern)</h3>
+                <h4 class="exp-company">Power International Holding · Doha, Qatar</h4>
               </div>
-              <span class="timeline-date">Feb 2025 – May 2025</span>
+              <span class="exp-date">Jan 2026 – Apr 2026</span>
             </div>
-            <ul class="timeline-bullets">
-              <li>Developed dynamic full-stack web applications using <strong>React.js</strong> and <strong>Node.js</strong>, connecting RESTful endpoints with a MySQL database.</li>
-              <li>Optimized SQL query performance and data handling pipelines, cutting query response latency.</li>
-              <li>Collaborated in Agile sprints using Git/GitHub, participating in weekly code reviews and bi-weekly release cycles.</li>
+            <ul class="exp-bullets">
+              <li>Built and deployed a multi-country <strong>Bank Validation System</strong> (Qatar, Saudi Arabia, UAE) using UiPath Studio & Orchestrator with <strong>zero manual intervention</strong>.</li>
+              <li>Engineered a two-phase IBAN validation engine (structural regional rules + live browser verification) with six-condition status classification.</li>
+              <li>Configured unattended bot deployment via Orchestrator (Machine Key setup, trigger scheduling, remote monitoring) and delivered automated exception reports for finance and compliance teams.</li>
             </ul>
-            <div class="item-tags">
-              <span class="tag-sm">React.js</span>
-              <span class="tag-sm">Node.js</span>
-              <span class="tag-sm">REST APIs</span>
-              <span class="tag-sm">MySQL</span>
-              <span class="tag-sm">Git</span>
+            <div class="exp-tags">
+              <span>UiPath Studio</span>
+              <span>Orchestrator</span>
+              <span>Unattended Bots</span>
+              <span>Banking Compliance</span>
+              <span>Excel Automation</span>
             </div>
           </div>
-        </div>
 
-        <!-- Experience 3 -->
-        <div class="timeline-item">
-          <div class="timeline-header-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
+          <!-- Experience 2 -->
+          <div class="exp-card">
+            <div class="exp-card-header">
               <div>
-                <h3 class="role-title">Cybersecurity Intern</h3>
-                <h4 class="company-name">DLithe · Bangalore, India</h4>
+                <h3 class="exp-role">Full Stack Developer (Intern)</h3>
+                <h4 class="exp-company">Thaniya Technologies · Mangalore, India</h4>
               </div>
-              <span class="timeline-date">Oct 2023 – Nov 2023</span>
+              <span class="exp-date">Feb 2025 – May 2025</span>
             </div>
-            <ul class="timeline-bullets">
+            <ul class="exp-bullets">
+              <li>Built dynamic web applications using <strong>React.js</strong> and <strong>Node.js</strong>, integrating REST APIs for real-time data exchange between frontend and MySQL backend.</li>
+              <li>Optimised database query performance and data handling pipelines for improved response times.</li>
+              <li>Collaborated in Agile sprints using Git/GitHub, contributing to code reviews and fortnightly releases.</li>
+            </ul>
+            <div class="exp-tags">
+              <span>React.js</span>
+              <span>Node.js</span>
+              <span>REST APIs</span>
+              <span>MySQL</span>
+              <span>Git</span>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="exp-card">
+            <div class="exp-card-header">
+              <div>
+                <h3 class="exp-role">Cybersecurity Intern</h3>
+                <h4 class="exp-company">DLithe · Bangalore, India</h4>
+              </div>
+              <span class="exp-date">Oct 2023 – Nov 2023</span>
+            </div>
+            <ul class="exp-bullets">
               <li>Conducted vulnerability assessments and penetration testing simulations, including deep SQL injection analysis.</li>
-              <li>Documented technical security findings and presented actionable hardening strategies to safeguard application endpoints.</li>
+              <li>Documented technical security findings and presented actionable hardening strategies.</li>
             </ul>
-            <div class="item-tags">
-              <span class="tag-sm">Vulnerability Assessment</span>
-              <span class="tag-sm">Penetration Testing</span>
-              <span class="tag-sm">SQL Injection</span>
-              <span class="tag-sm">App Security</span>
+            <div class="exp-tags">
+              <span>Vulnerability Assessment</span>
+              <span>Penetration Testing</span>
+              <span>SQL Injection</span>
             </div>
           </div>
+
         </div>
 
       </div>
     </section>
 
-    <!-- Key Featured Projects -->
-    <section id="projects" class="content-section">
-      <div class="section-header">
-        <span class="section-tag">PORTFOLIO</span>
-        <h2>Featured Projects</h2>
-      </div>
-
-      <div class="projects-grid">
+    <!-- Education & Credentials -->
+    <section id="about" class="section credentials-section">
+      <div class="container">
         
-        <!-- Project 1 -->
-        <div class="project-card featured">
-          <div class="project-badge">Enterprise RPA</div>
-          <h3>Bank Validation System</h3>
-          <p class="project-subtitle">UiPath RPA · Power International Holding, Qatar</p>
-          <p class="project-desc">
-            Production unattended automation verifying IBAN, SWIFT, and account numbers across Gulf-region banks (Qatar, KSA, UAE). Features automated 6-condition classification and real-time Excel compliance reporting.
-          </p>
-          <div class="project-tech">
-            <span>UiPath Studio</span>
-            <span>Orchestrator</span>
-            <span>Regex / Regional Rules</span>
-            <span>Excel Auto</span>
-          </div>
-          <div class="project-footer-note">
-            <span class="confidential-tag">🔒 Enterprise Internal Project · Code confidential due to Gulf banking data compliance</span>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-badge">AI Automation</div>
-          <h3>AI-Powered Bid Automation Pipeline</h3>
-          <p class="project-subtitle">n8n + Python + Gemini LLM</p>
-          <p class="project-desc">
-            Autonomous 13-node pipeline detecting freelance/contract leads, drafting contextual proposal bids with LLMs, and deduplicating client leads via SQLite — saving 80%+ manual research time.
-          </p>
-          <div class="project-tech">
-            <span>n8n</span>
-            <span>Python</span>
-            <span>LLM APIs</span>
-            <span>SQLite</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://github.com/rifaashrn" target="_blank" class="proj-link-btn">💻 View on GitHub →</a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-badge">Machine Learning</div>
-          <h3>Fraud Detection System</h3>
-          <p class="project-subtitle">Python · ML Pipeline · Real-Time Alerts</p>
-          <p class="project-desc">
-            Credit card fraud classification model analyzing historical transaction patterns to predict anomalous behavior with integrated SMTP automated alerting for real-time notifications.
-          </p>
-          <div class="project-tech">
-            <span>Python</span>
-            <span>Scikit-Learn</span>
-            <span>SMTP Alerts</span>
-            <span>Data Cleansing</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://github.com/rifaashrn" target="_blank" class="proj-link-btn">💻 View on GitHub →</a>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-badge">Full Stack & AI</div>
-          <h3>Interactive AI Career Twin</h3>
-          <p class="project-subtitle">RAG · FastAPI · ChromaDB · Gemini</p>
-          <p class="project-desc">
-            Cloud-hosted AI persona trained on Rifa's exact experience, metrics, and codebase. Embeds directly into this portfolio to answer recruiter questions 24/7 with zero latency.
-          </p>
-          <div class="project-tech">
-            <span>FastAPI</span>
-            <span>ChromaDB</span>
-            <span>Gemini API</span>
-            <span>Render Cloud</span>
-          </div>
-          <div class="project-actions flex-links">
-            <a href="https://github.com/rifaashrn/career-twin-backend" target="_blank" class="proj-link-btn">⚡ Backend Repo</a>
-            <a href="https://github.com/rifaashrn/rifaashrn.github.io" target="_blank" class="proj-link-btn">🌐 Frontend Repo</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Education & Languages Section -->
-    <section id="education" class="content-section">
-      <div class="section-header">
-        <span class="section-tag">CREDENTIALS</span>
-        <h2>Education & Languages</h2>
-      </div>
-
-      <div class="edu-grid">
-        
-        <div class="edu-card">
-          <div class="edu-icon">🎓</div>
-          <div class="edu-details">
+        <div class="credentials-grid">
+          
+          <!-- Education Card -->
+          <div class="cred-card">
+            <div class="cred-icon"><i class="ri-graduation-cap-line"></i></div>
             <h3>B.Tech in Computer Science Engineering</h3>
-            <p class="edu-institution">Shree Devi Institute of Technology (VTU) · Karnataka, India</p>
-            <p class="edu-year">2021 – 2025</p>
-            <p class="edu-note">Core focus on Algorithms, Distributed Systems, Software Engineering, Database Management, and Network Security.</p>
+            <p class="cred-institution">Shree Devi Institute of Technology (VTU) · Karnataka, India</p>
+            <p class="cred-year">2021 – 2025</p>
+            <p class="cred-desc">
+              Strong engineering foundation in Algorithms, Operating Systems, Database Architecture, and Distributed Systems.
+            </p>
           </div>
-        </div>
 
-        <div class="lang-card">
-          <div class="edu-icon">🌐</div>
-          <div class="lang-details">
-            <h3>Language Proficiencies</h3>
-            <div class="lang-list">
-              <div class="lang-item">
-                <span class="lang-name">English</span>
-                <span class="lang-level">Fluent</span>
+          <!-- Languages Card -->
+          <div class="cred-card">
+            <div class="cred-icon"><i class="ri-translate-2"></i></div>
+            <h3>Languages</h3>
+            <div class="lang-grid">
+              <div class="lang-node">
+                <strong>English</strong>
+                <span>Fluent</span>
               </div>
-              <div class="lang-item">
-                <span class="lang-name">Malayalam</span>
-                <span class="lang-level">Native</span>
+              <div class="lang-node">
+                <strong>Malayalam</strong>
+                <span>Native</span>
               </div>
-              <div class="lang-item">
-                <span class="lang-name">Hindi</span>
-                <span class="lang-level">Conversational</span>
+              <div class="lang-node">
+                <strong>Hindi</strong>
+                <span>Conversational</span>
               </div>
-              <div class="lang-item">
-                <span class="lang-name">Arabic</span>
-                <span class="lang-level">Basic</span>
+              <div class="lang-node">
+                <strong>Arabic</strong>
+                <span>Basic</span>
               </div>
             </div>
           </div>
+
+          <!-- Availability & Visa -->
+          <div class="cred-card highlight-card">
+            <div class="cred-icon"><i class="ri-shield-check-line"></i></div>
+            <h3>Availability & Visa</h3>
+            <p class="cred-institution">Doha, Qatar · Immediate Joining</p>
+            <p class="cred-year">Transferable Visa with NOC</p>
+            <p class="cred-desc">
+              Eligible for immediate sponsorship transfer in Qatar or ready to join global remote software & automation engineering teams.
+            </p>
+          </div>
+
         </div>
 
       </div>
     </section>
 
-    <!-- Contact CTA Section -->
-    <section id="contact" class="content-section contact-section">
-      <div class="contact-box">
-        <span class="section-tag light">GET IN TOUCH</span>
-        <h2>Let's Build Impactful Automations Together</h2>
-        <p>Available for immediate hire in Doha, Qatar (Transferable Visa with NOC) or Global Remote roles.</p>
+    <!-- Contact & Call to Action Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
         
-        <div class="contact-methods">
-          <a href="mailto:rifasherin958@gmail.com" class="contact-card">
-            <span class="c-icon">✉️</span>
-            <div>
-              <span class="c-label">Email</span>
-              <span class="c-val">rifasherin958@gmail.com</span>
-            </div>
-          </a>
+        <div class="cta-banner">
+          <div class="cta-glow"></div>
+          <span class="subhead-pill">GET IN TOUCH</span>
+          <h2 class="cta-heading">Ready to automate your operations?</h2>
+          <p class="cta-sub">
+            Let's discuss how my UiPath RPA experience and AI automation pipelines can create immediate value for your team.
+          </p>
 
-          <a href="tel:+97470860489" class="contact-card">
-            <span class="c-icon">📞</span>
-            <div>
-              <span class="c-label">Phone / WhatsApp</span>
-              <span class="c-val">+974 7086 0489</span>
-            </div>
-          </a>
+          <div class="cta-action-grid">
+            <a href="mailto:rifasherin958@gmail.com" class="cta-item">
+              <i class="ri-mail-line"></i>
+              <div>
+                <span>EMAIL ME</span>
+                <strong>rifasherin958@gmail.com</strong>
+              </div>
+            </a>
 
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="contact-card">
-            <span class="c-icon">💼</span>
-            <div>
-              <span class="c-label">LinkedIn</span>
-              <span class="c-val">Connect on LinkedIn</span>
-            </div>
-          </a>
+            <a href="tel:+97470860489" class="cta-item">
+              <i class="ri-phone-line"></i>
+              <div>
+                <span>CALL / WHATSAPP</span>
+                <strong>+974 7086 0489</strong>
+              </div>
+            </a>
 
-          <a href="Rifa_Sherin_Resume.pdf" target="_blank" class="contact-card">
-            <span class="c-icon">📄</span>
-            <div>
-              <span class="c-label">Resume</span>
-              <span class="c-val">Download PDF</span>
-            </div>
-          </a>
+            <a href="Rifa_Sherin_Resume.pdf" target="_blank" class="cta-item">
+              <i class="ri-file-pdf-line"></i>
+              <div>
+                <span>RESUME</span>
+                <strong>Download PDF</strong>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com" target="_blank" class="cta-item">
+              <i class="ri-linkedin-fill"></i>
+              <div>
+                <span>LINKEDIN</span>
+                <strong>Connect Profile</strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="cta-ai-box">
+            <p>Want instant answers about my project architectures, notice period, or code?</p>
+            <button onclick="toggleChat()" class="btn btn-primary btn-large">
+              <i class="ri-robot-2-fill"></i> Chat with Rifa's AI Twin
+            </button>
+          </div>
         </div>
 
-        <div class="contact-ai-cta">
-          <p>Want quick answers about my tech stack, notice period, or code architecture?</p>
-          <button onclick="toggleChat()" class="btn btn-primary btn-large">
-            🤖 Ask Rifa's AI Twin Right Now
-          </button>
-        </div>
       </div>
     </section>
 
@@ -470,13 +602,51 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
-      <p>© 2026 Rifa Sherin · Intelligent Automation Developer · Doha, Qatar</p>
-      <p class="footer-sub">Built with HTML5, CSS3, JavaScript, and powered by Rifa's Live AI Twin backend.</p>
+      <div class="f-top">
+        <div class="f-logo">Rifa<span class="accent-text">.dev</span></div>
+        <div class="f-socials">
+          <a href="https://github.com/rifaashrn" target="_blank" title="GitHub"><i class="ri-github-fill"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          <a href="mailto:rifasherin958@gmail.com" title="Email"><i class="ri-mail-line"></i></a>
+          <a href="tel:+97470860489" title="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© 2026 Rifa Sherin · Intelligent Automation & RPA Engineer · Doha, Qatar</p>
+        <p class="f-sub">Built with clean modern HTML/CSS and connected to live AI Twin RAG backend.</p>
+      </div>
     </div>
   </footer>
 
   <!-- Career Twin Chat Widget -->
   <div id="career-twin-widget"></div>
   <script src="widget.js"></script>
+
+  <!-- Navigation Toggle Script -->
+  <script>
+    const ham = document.getElementById("hamburger");
+    const nLinks = document.getElementById("navLinks");
+    if (ham && nLinks) {
+      ham.addEventListener("click", () => {
+        ham.classList.toggle("open");
+        nLinks.classList.toggle("open");
+      });
+      document.querySelectorAll(".nav-link").forEach(a => {
+        a.addEventListener("click", () => {
+          ham.classList.remove("open");
+          nLinks.classList.remove("open");
+        });
+      });
+    }
+
+    window.addEventListener("scroll", () => {
+      const nav = document.getElementById("navbar");
+      if (window.scrollY > 30) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+  </script>
 </body>
 </html>
